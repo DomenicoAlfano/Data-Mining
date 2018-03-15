@@ -1,0 +1,63 @@
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>Google Maps - pygmaps </title>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=visualization&sensor=true_or_false"></script>
+<script type="text/javascript">
+	function initialize() {
+		var centerlatlng = new google.maps.LatLng(41.902783, 12.496366);
+		var myOptions = {
+			zoom: 11,
+			center: centerlatlng,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		};
+		var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+		var latlng = new google.maps.LatLng(41.900000, 12.500000);
+		var img = new google.maps.MarkerImage('/Users/domenicoalfano/Master/Data Mining/hw/1/exercise5/gmplot/markers/3B0B39.png');
+		var infowindow0 = new google.maps.InfoWindow({content: "<span>'@SAIDdal1923: Il  pranzetto  di oggi martedì 10 Ottobre. lunch at said roma SAID dal 1923 rome head house and… https://t.co/dvD70Vm1wt'</span>"});
+		var marker0 = new google.maps.Marker({
+		title: "no implementation",
+		icon: img,
+		position: latlng
+		});
+		google.maps.event.addListener(marker0, "mouseover", function() {infowindow0.open(map,marker0);});
+		marker0.setMap(map);
+		var latlng = new google.maps.LatLng(41.790930, 12.236620);
+		var img = new google.maps.MarkerImage('/Users/domenicoalfano/Master/Data Mining/hw/1/exercise5/gmplot/markers/3B0B39.png');
+		var infowindow1 = new google.maps.InfoWindow({content: "<span>'@SAIDdal1923: I'm at Gate C4 in Fiumicino, Lazio w/ @lachlanj @japh @pwcc https://t.co/h1mv4sCQN3'</span>"});
+		var marker1 = new google.maps.Marker({
+		title: "no implementation",
+		icon: img,
+		position: latlng
+		});
+		google.maps.event.addListener(marker1, "mouseover", function() {infowindow1.open(map,marker1);});
+		marker1.setMap(map);
+		var latlng = new google.maps.LatLng(41.900000, 12.500000);
+		var img = new google.maps.MarkerImage('/Users/domenicoalfano/Master/Data Mining/hw/1/exercise5/gmplot/markers/000000.png');
+		var infowindow2 = new google.maps.InfoWindow({content: "<span>'@SAIDdal1923: Il  pranzetto  di oggi martedì 10 Ottobre. lunch at said roma SAID dal 1923 rome head house and… https://t.co/dvD70Vm1wt'</span>"});
+		var marker2 = new google.maps.Marker({
+		title: "no implementation",
+		icon: img,
+		position: latlng
+		});
+		google.maps.event.addListener(marker2, "mouseover", function() {infowindow2.open(map,marker2);});
+		marker2.setMap(map);
+		var latlng = new google.maps.LatLng(41.790930, 12.236620);
+		var img = new google.maps.MarkerImage('/Users/domenicoalfano/Master/Data Mining/hw/1/exercise5/gmplot/markers/000000.png');
+		var infowindow3 = new google.maps.InfoWindow({content: "<span>'@SAIDdal1923: I'm at Gate C4 in Fiumicino, Lazio w/ @lachlanj @japh @pwcc https://t.co/h1mv4sCQN3'</span>"});
+		var marker3 = new google.maps.Marker({
+		title: "no implementation",
+		icon: img,
+		position: latlng
+		});
+		google.maps.event.addListener(marker3, "mouseover", function() {infowindow3.open(map,marker3);});
+		marker3.setMap(map);
+	}
+</script>
+</head>
+<body style="margin:0px; padding:0px;" onload="initialize()">
+	<div id="map_canvas" style="width: 100%; height: 100%;"></div>
+</body>
+</html>

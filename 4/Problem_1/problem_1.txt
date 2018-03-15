@@ -1,0 +1,24 @@
+1.
+For the Algorithm 2, the value that should be X is equal to 6 because each edge is counted two times.
+So, the value of T is updated by T + 1/6.
+
+2. 
+Using the brute force algorithm, the worst-case bound on the running time in terms of n for a general graph and for constant-degree graphs is n^3.
+Using the wedge enumerator algorithm, the worst-case bound on the running time in terms of n for a general graph is n^3.
+Instead, for constant-degree graphs, using the wedge enumerator algorithm, the worst-case bound on the running time in terms of n is n*k^2 where k is the costant degree.
+
+3.
+T = 0
+dict = empty_dict  #create an empty dictionary
+for each edge
+    n_1 = lowest_degree(n_1,n_2)    #compute the node with lowest degree between the two nodes connected by the edge
+    dict.key = n_1      #assuming n_1 the node with lowest-degree between n_1 and n_2, update the key of the dictionary with the node that has the lowest degree 
+    dict.value = list(n_2)      #assuming n_2 the node with highest-degree between n_1 and n_2, update the value of the dictionary with a list that contains the node with the higher degree
+for each key in dict
+    compute_combinations(a.value)   #compute all the possible combinations of edges between the nodes in the list
+    if combination exist then
+        T = T + 1       #update T by 1
+
+4.
+Let be 'e+1' the number of nodes and 'e' the number of edges for each node, m = (e+1)*e/2. 'e' is divided by two in order to count each edge once.
+This equation can be approximed to e = O(sqrt(m))
